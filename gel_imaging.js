@@ -13,11 +13,9 @@ displayIntensity = document.getElementById('displayIntensity'),
 displayContextIntensity = display.getContext('2d');
 
 const constraints = {
-    video: true,
-
-    advanced: [{
-        facingMode: "environment"
-    }]
+    video: {width: {min: 1280}, height: {min: 720},
+    facingMode: "environment"
+}
 };
 
 const video = document.querySelector('video');
