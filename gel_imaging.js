@@ -13,10 +13,15 @@ displayIntensity = document.getElementById('displayIntensity'),
 displayContextIntensity = display.getContext('2d');
 
 const constraints = {
-    video: { facingMode: "environment" }
+    video: true,
+
+    advanced: [{
+        facingMode: "environment"
+    }]
 };
 
 const video = document.querySelector('video');
+
 
 navigator.mediaDevices.getUserMedia(constraints).
 then((stream) => {video.srcObject = stream});
