@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="61245c7c-c7bb-41fb-bb44-1287a1dd168f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/capture.html" beforeDir="false" afterPath="$PROJECT_DIR$/capture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gel_imaging.js" beforeDir="false" afterPath="$PROJECT_DIR$/gel_imaging.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,13 +37,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="803" />
+          <entry key="html" value="810" />
           <entry key="js" value="2026" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="803" />
+          <entry key="HTML" value="810" />
           <entry key="JavaScript" value="2026" />
         </counts>
       </usages-collector>
@@ -73,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/capture.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#video#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -183,12 +182,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555393663092</updated>
-      <workItem from="1555393665891" duration="12212000" />
+      <workItem from="1555393665891" duration="12381000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12212000" />
+    <option name="totallyTimeSpent" value="12381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="808" extended-state="0" />
@@ -248,7 +247,7 @@
     <entry file="file://$PROJECT_DIR$/capture.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#video#0;n#body#0;n#html#0;n#!!top" expanded="true" />
