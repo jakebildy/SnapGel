@@ -6,11 +6,12 @@
     <title>SnapGel</title>
 
 </head>
-<body>
+<body style="background-color:black">
 
-
-<video autoplay width=device-width, initial-scale="1.0"></video>
-
+<video autoplay width=device-width, initial-scale="1.0", style="display: none"></video>
+<canvas id="feed" style="display: none"></canvas>
+<canvas id="display" width=device-width,></canvas>
+<button onclick="changeRenderFormat()">Change Render Format</button>
 <script src="gel_imaging.js"></script>
 </body>
 </html>
