@@ -1,10 +1,9 @@
 const constraints = {
-    video: true,
-    facingMode: 'environment'
+    video: true
 };
 
 const video = document.querySelector('video');
-
+constraints.facingMode = "environment";
 
 navigator.mediaDevices.getUserMedia(constraints).
 then((stream) => {video.srcObject = stream});
