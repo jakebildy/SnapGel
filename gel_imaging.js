@@ -37,8 +37,14 @@ function streamFeed() {
         imageData.data = renderBlackWhite(imageData.data);
     }
 
+
+    //Inverse
+    if  (format === 2) {
+        imageData.data = renderInverse(imageData.data);
+    }
+
     //Intensity
-    if (format === 2) {
+    if (format === 3) {
         imageData.data = renderIntensity(imageData.data);
     }
 
@@ -70,6 +76,17 @@ function renderBlackWhite(data) {
     for (var i = 0, l = data.length; i < l; i += 4) {
 
         data[i] = data[i]/2 + data[i+1]/2; // r
+        data[i+1] = data[i]
+        data[i + 2] = data[i]; // b
+
+    }
+    return data;
+}
+
+function renderInverse(data) {
+    for (var i = 0, l = data.length; i < l; i += 4) {
+
+        data[i] = 255 - data[i]/2 + data[i+1]/2; // r
         data[i+1] = data[i]
         data[i + 2] = data[i]; // b
 
@@ -138,7 +155,7 @@ function colorDistance(r, g, b) {
 
 function changeRenderFormat() {
     format += 1;
-    format = format % 3;
+    format = format % 4;
 
 }
 
