@@ -86,7 +86,7 @@ function renderBlackWhite(data) {
 function renderInverse(data) {
     for (var i = 0, l = data.length; i < l; i += 4) {
 
-        data[i] = 255 - data[i]/2 + data[i+1]/2; // r
+        data[i] = 255 + data[i]/2 - data[i+1]/2; // r
         data[i+1] = data[i]
         data[i + 2] = data[i]; // b
 
