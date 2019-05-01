@@ -57,9 +57,13 @@ function streamFeed() {
 function renderColorspace(data) {
     for (var i = 0, l = data.length; i < l; i += 4) {
 
+
+        data[i + 2] = 0; // b
+
         if (data[i] < 31) {
             data[i + 1] = 255; // g
             data[i] = 255;
+            data[i+2] = 255;
 
         }
 
@@ -67,8 +71,6 @@ function renderColorspace(data) {
             data[i+1] = 0;
         }
 
-
-        data[i + 2] = 0; // b
 
     }
     return data;
