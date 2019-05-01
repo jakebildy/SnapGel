@@ -58,7 +58,9 @@ function renderColorspace(data) {
     for (var i = 0, l = data.length; i < l; i += 4) {
 
         if (data[i] < 31) {
-        data[i + 1] = Math.round(Math.log(data[i + 1])); // g
+            data[i + 1] = 255; // g
+            data[i] = 255;
+
         }
 
         if (data[i+1] < 0) {
