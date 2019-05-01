@@ -31,9 +31,17 @@ if (SUPPORTS_MEDIA_DEVICES) {
                 //let there be light!
                 const btn = document.querySelector('.switch');
                 btn.addEventListener('click', function(){
-                    track.applyConstraints({
-                        advanced: [{torch: true}]
-                    });
+
+                    while (true) {
+                        setTimeout(function(){                     track.applyConstraints({
+                            advanced: [{torch: true}]
+                        });}, 1000);
+
+                        setTimeout(function(){                     track.applyConstraints({
+                            advanced: [{torch: false}]
+                        });}, 1000);
+                    }
+
                 });
             });
         });
