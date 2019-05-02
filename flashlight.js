@@ -29,14 +29,12 @@ if (SUPPORTS_MEDIA_DEVICES) {
 
                 //let there be light!
                 const btn = document.querySelector('.switch');
-                btn.addEventListener('mousedown', function(){
+                btn.addEventListener('click', function(){
 
                         darkData = imageData.data;
-
-
-                    for (i = 1; i <= 50; ++i) {
+                        
                         flipFlashlight(track);
-                    }
+
 
 
                 });
@@ -47,16 +45,18 @@ if (SUPPORTS_MEDIA_DEVICES) {
     //The light will be on as long the track exists
 
     function flipFlashlight(track){
-        setTimeout(function(){
-            track.applyConstraints({
-                advanced: [{torch: true}]
-            });
-        }, 1000);
-        setTimeout(function(){
-            track.applyConstraints({
-                advanced: [{torch: false}]
-            });
-        }, 1000);
+        for (i = 1; i <= 50; ++i) {
+            setTimeout(function(){
+                track.applyConstraints({
+                    advanced: [{torch: true}]
+                });
+            }, 1000);
+            setTimeout(function(){
+                track.applyConstraints({
+                    advanced: [{torch: false}]
+                });
+            }, 1000);
+        }
     }
 
 }
