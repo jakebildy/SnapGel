@@ -26,21 +26,18 @@ if (SUPPORTS_MEDIA_DEVICES) {
             const imageCapture = new ImageCapture(track)
             const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
 
-                //todo: check if camera has a torch
 
                 //let there be light!
                 const btn = document.querySelector('.switch');
                 btn.addEventListener('click', function(){
 
-                    while (true) {
-                        setTimeout(function(){                     track.applyConstraints({
-                            advanced: [{torch: true}]
-                        });}, 1000);
+                        darkData = imageData.data;
 
-                        setTimeout(function(){                     track.applyConstraints({
-                            advanced: [{torch: false}]
-                        });}, 1000);
+
+                    for (i = 1; i <= 50; ++i) {
+                        flipFlashlight(track);
                     }
+
 
                 });
             });
@@ -49,5 +46,17 @@ if (SUPPORTS_MEDIA_DEVICES) {
 
     //The light will be on as long the track exists
 
+    function flipFlashlight(track){
+        setTimeout(function(){
+            track.applyConstraints({
+                advanced: [{torch: true}]
+            });
+        }, 1000);
+        setTimeout(function(){
+            track.applyConstraints({
+                advanced: [{torch: false}]
+            });
+        }, 1000);
+    }
 
 }
