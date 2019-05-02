@@ -117,7 +117,7 @@ function streamFeed() {
     requestAnimationFrame(streamFeed);
     feedContext.drawImage(video, 0, 0, display.width, display.height);
 
-  //  imageData = feedContext.getImageData(0, 0, display.width, display.height);
+    imageData = feedContext.getImageData(0, 0, display.width, display.height);
 
 //    imageData.data = renderColorSpace(imageData.data);
 
@@ -137,7 +137,7 @@ function streamFeed() {
         imageData.data = renderIntensity(imageData.data);
     }
 
-    displayContext.putImageData(imageData, 0, 0);
+
 
 
 }
