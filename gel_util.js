@@ -56,11 +56,21 @@ function corr(dataOld, dataNew) {
 /**
  * This function scales an RGB value by a scalar (the effect changes brightness). Pass in the R value of the RGB
  */
-function scale(r_val, i, scalar) {
+function scale(data, i, scalar) {
 
-    data[i] = data[i] * scalar;
-    data[i+1] = data[i+1] * scalar;
-    data[i+3] = data[i+2] * scalar
+    data[i] = Math.floor(data[i] * scalar);
+    data[i+1] = Math.floor(data[i+1] * scalar);
+    data[i+2] = Math.floor(data[i+2] * scalar);
+
+    if (data[i] > 255) {
+        data[i] = 255;
+    }
+    if (data[i+1] > 255) {
+        data[i+1] = 255;
+    }
+    if (data[i+2] > 255) {
+        data[i+2] = 255;
+    }
 
     return data;
 }

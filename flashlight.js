@@ -45,7 +45,7 @@ if (SUPPORTS_MEDIA_DEVICES) {
     //The light will be on as long the track exists
 
     function flipFlashlight(track){
-        for (i = 1; i <= 50; ++i) {
+        for (i = 1; i <= 500; ++i) {
             setTimeout(function(){
                 track.applyConstraints({
                     advanced: [{torch: true}]
@@ -56,7 +56,6 @@ if (SUPPORTS_MEDIA_DEVICES) {
                     advanced: [{torch: false}]
                 });
             }, 1000);
-            alert(i)
         }
     }
 
