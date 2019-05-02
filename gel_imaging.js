@@ -4,6 +4,8 @@
  * This file deals with rendering the gel image file from the video feed.
  */
 
+
+
 var format = 0;
 
 var feed = document.getElementById('feed'),
@@ -28,13 +30,14 @@ function renderColorSpace(data) {
     for (var i = 0, l = data.length; i < l; i += 4) {
 
         var hsv = RGBtoHSV(data[i], data[i+1], data[i+2]);
-        hsv[1] = hsv[1]*3;
+        hsv[1] = hsv[1]*4;
         var rgb = HSVtoRGB(hsv);
         data[i] = rgb[0];
         data[i+1] = rgb[1];
         data[i+2] = rgb[2];
 
         data[i+2] = 0;
+        data[i+1] = data[i+1]/2;
     }
 
     return data;
