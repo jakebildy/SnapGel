@@ -26,35 +26,17 @@ if (SUPPORTS_MEDIA_DEVICES) {
             const imageCapture = new ImageCapture(track)
             const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
 
-                track.applyConstraints({
-                    advanced: [{torch: true}]
-                });
+                    turnOnFlashlight(track);
 
 
-                });
             });
         });
     });
 
-    function flipFlashlight(track){
-        for (i = 1; i <= 500; ++i) {
-            setTimeout(function(){
-                track.applyConstraints({
-                    advanced: [{torch: true}]
-                });
-            }, 1000);
-
-            setTimeout(function(){
-                track.applyConstraints({
-                    advanced: [{torch: false}]
-                });
-            }, 1000);
-            setTimeout(function(){
-
-            }, 1000);
-
-
-        }
+    function turnOnFlashlight(track) {
+        track.applyConstraints({
+            advanced: [{torch: true}]
+        });
     }
 
 }
