@@ -32,7 +32,7 @@ if (SUPPORTS_MEDIA_DEVICES) {
                 btn.addEventListener('click', function(){
 
                         darkData = imageData.data;
-                        
+
                         flipFlashlight(track);
 
 

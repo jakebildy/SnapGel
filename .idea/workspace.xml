@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61245c7c-c7bb-41fb-bb44-1287a1dd168f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flashlight.js" beforeDir="false" afterPath="$PROJECT_DIR$/flashlight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gel_imaging.js" beforeDir="false" afterPath="$PROJECT_DIR$/gel_imaging.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -90,20 +90,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flashlight.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="134">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gel_imaging.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="94" column="31" lean-forward="true" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
+            <state relative-caret-position="371">
+              <caret line="28" column="28" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -140,9 +140,9 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/capture.html" />
-        <option value="$PROJECT_DIR$/gel_imaging.js" />
         <option value="$PROJECT_DIR$/gel_util.js" />
         <option value="$PROJECT_DIR$/flashlight.js" />
+        <option value="$PROJECT_DIR$/gel_imaging.js" />
       </list>
     </option>
   </component>
@@ -213,12 +213,12 @@
       <workItem from="1555393665891" duration="12913000" />
       <workItem from="1555748363949" duration="236000" />
       <workItem from="1556304330066" duration="1351000" />
-      <workItem from="1556634190918" duration="7543000" />
+      <workItem from="1556634190918" duration="7618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22043000" />
+    <option name="totallyTimeSpent" value="22118000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -260,20 +260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/capture.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#video#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#canvas#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -296,17 +282,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gel_imaging.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="94" column="31" lean-forward="true" selection-start-line="94" selection-start-column="31" selection-end-line="94" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flashlight.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/capture.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#video#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#canvas#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gel_imaging.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>

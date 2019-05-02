@@ -28,9 +28,9 @@ function renderColorSpace(data) {
 
     correllation = corr(darkData, data);
 
-    for (var i = 0, l = data.length; i < l; i += 4) {
-         data = scale(data, i, correllation[i]);
-    }
+    // for (var i = 0, l = data.length; i < l; i += 4) {
+    //      data = scale(data, i, correllation[i]);
+    // }
 
     return data;
 }
