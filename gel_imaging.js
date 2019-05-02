@@ -40,23 +40,25 @@ function renderColorSpace(data) {
         data[i+1] = data[i+1]/2;
 
         //Eliminates principal flashlight glare
-        if (data[i] > 250 && data[i+1] < 30) {
+        if (data[i] > 240 && data[i+1] < 30) {
             data[i] = 0;
         }
 
         //Render the result in black and white
 
-        pixel = (data[i] + data[i+1])/2
+        pixel = (data[i] + data[i+1])/2;
 
         // Eliminates secondary flashlight glare
 
-        if (pixel > 250) {
+        if (pixel > 230) {
             data[i] = 100;
         }
 
-        // Increase contrast
+        // Increase contrast with gel bands
 
-        pixel = pixel * 1.3;
+        if (pixel  >  150) {
+            pixel = pixel * 1.3;
+        }
 
         if (pixel > 255) {
             pixel = 255;
