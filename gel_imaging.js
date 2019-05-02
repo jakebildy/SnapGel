@@ -38,6 +38,18 @@ function renderColorSpace(data) {
 
         data[i+2] = 0;
         data[i+1] = data[i+1]/2;
+
+        if (data[i] > 250 && data[i+1] < 30) {
+            data[i] = 0;
+        }
+
+        //Render the result in black and white
+
+        pixel = (data[i] + data[i+1])/2
+
+        data[i] = pixel;
+        data[i+1] = pixel;
+        data[i+2] = pixel;
     }
 
     return data;
