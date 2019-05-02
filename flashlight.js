@@ -56,7 +56,7 @@ if (SUPPORTS_MEDIA_DEVICES) {
                 track.applyConstraints({
                     advanced: [{torch: false}]
                 });
-                darkData = feedContext.getImageData(0, 0, display.width, display.height).data;
+                imageData = feedContext.getImageData(0, 0, display.width, display.height);
             }, 1000);
 
 

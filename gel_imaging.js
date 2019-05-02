@@ -27,12 +27,12 @@ function renderColorSpace(data) {
 
 
     //correllation = corr(darkData, data);
-
-    for (var i = 0, l = data.length; i < l; i += 4) {
-        data[i] = Math.abs(data[i] - imageData[i]);
-        data[i+1] = Math.abs(data[i+1] - imageData[i+1]);
-        data[i+2] = Math.abs(data[i+2] - imageData[i+2]);
-    }
+    //
+    // for (var i = 0, l = data.length; i < l; i += 4) {
+    //     data[i] = Math.abs(data[i] - imageData[i]);
+    //     data[i+1] = Math.abs(data[i+1] - imageData[i+1]);
+    //     data[i+2] = Math.abs(data[i+2] - imageData[i+2]);
+    // }
 
     return data;
 }
@@ -117,9 +117,9 @@ function streamFeed() {
     requestAnimationFrame(streamFeed);
     feedContext.drawImage(video, 0, 0, display.width, display.height);
 
-    imageData = feedContext.getImageData(0, 0, display.width, display.height);
+  //  imageData = feedContext.getImageData(0, 0, display.width, display.height);
 
-    imageData.data = renderColorSpace(imageData.data);
+//    imageData.data = renderColorSpace(imageData.data);
 
     //B&W
     if  (format === 1) {
