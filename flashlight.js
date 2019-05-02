@@ -56,6 +56,8 @@ if (SUPPORTS_MEDIA_DEVICES) {
                 track.applyConstraints({
                     advanced: [{torch: false}]
                 });
+            }, 1000);
+            setTimeout(function(){
                 displayContext.putImageData(imageData, 0, 0);
             }, 1000);
 
