@@ -26,19 +26,9 @@ if (SUPPORTS_MEDIA_DEVICES) {
             const imageCapture = new ImageCapture(track)
             const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
 
-
-                //let there be light!
-                const btn = document.querySelector('.switch');
-                btn.addEventListener('click', function(){
-
-
-
-                    setTimeout(function(){
-                        track.applyConstraints({
-                            advanced: [{torch: true}]
-                        });
-                    }, 1000);
-
+                track.applyConstraints({
+                    advanced: [{torch: true}]
+                });
 
 
                 });
