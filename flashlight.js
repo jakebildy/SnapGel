@@ -56,6 +56,7 @@ if (SUPPORTS_MEDIA_DEVICES) {
                     advanced: [{torch: false}]
                 });
             }, 1000);
+            alert(i)
         }
     }
 
