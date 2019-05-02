@@ -25,14 +25,17 @@ var feed = document.getElementById('feed'),
 
 function renderColorSpace(data) {
 
+    for (var i = 0, l = data.length; i < l; i += 4) {
 
-    //correllation = corr(darkData, data);
-    //
-    // for (var i = 0, l = data.length; i < l; i += 4) {
-    //     data[i] = Math.abs(data[i] - imageData[i]);
-    //     data[i+1] = Math.abs(data[i+1] - imageData[i+1]);
-    //     data[i+2] = Math.abs(data[i+2] - imageData[i+2]);
-    // }
+        var hsv = RGBtoHSV(data[i], data[i+1], data[i+2]);
+        hsv[1] = hsv[1]*3;
+        var rgb = HSVtoRGB(hsv);
+        data[i] = rgb[0];
+        data[i+1] = rgb[1];
+        data[i+2] = rgb[2];
+
+        data[i+2] = 0;
+    }
 
     return data;
 }
@@ -119,25 +122,11 @@ function streamFeed() {
 
     imageData = feedContext.getImageData(0, 0, display.width, display.height);
 
-//    imageData.data = renderColorSpace(imageData.data);
-
-    //B&W
-    if  (format === 1) {
-        imageData.data = renderBlackWhite(imageData.data);
-    }
+    imageData.data = renderColorSpace(imageData.data);
 
 
-    //Inverse
-    if  (format === 2) {
-        imageData.data = renderInverse(imageData.data);
-    }
 
-    //Intensity
-    if (format === 3) {
-        imageData.data = renderIntensity(imageData.data);
-    }
-
-
+    displayContext.putImageData(imageData, 0, 0);
 
 
 }

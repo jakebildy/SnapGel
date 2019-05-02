@@ -33,7 +33,11 @@ if (SUPPORTS_MEDIA_DEVICES) {
 
 
 
-                    flipFlashlight(track);
+                    setTimeout(function(){
+                        track.applyConstraints({
+                            advanced: [{torch: true}]
+                        });
+                    }, 1000);
 
 
 
@@ -41,8 +45,6 @@ if (SUPPORTS_MEDIA_DEVICES) {
             });
         });
     });
-
-    //The light will be on as long the track exists
 
     function flipFlashlight(track){
         for (i = 1; i <= 500; ++i) {
@@ -58,7 +60,7 @@ if (SUPPORTS_MEDIA_DEVICES) {
                 });
             }, 1000);
             setTimeout(function(){
-                displayContext.putImageData(imageData, 0, 0);
+
             }, 1000);
 
 
