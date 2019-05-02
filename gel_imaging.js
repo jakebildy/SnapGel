@@ -9,14 +9,14 @@ var format = 0;
 var feed = document.getElementById('feed'),
     feedContext = feed.getContext('2d'),
 
-display = document.getElementById('display'),
-displayContext = display.getContext('2d'),
+    display = document.getElementById('display'),
+    displayContext = display.getContext('2d'),
 
-displayBW = document.getElementById('displayBW'),
-displayContextBW = display.getContext('2d'),
+    displayBW = document.getElementById('displayBW'),
+    displayContextBW = display.getContext('2d'),
 
-displayIntensity = document.getElementById('displayIntensity'),
-displayContextIntensity = display.getContext('2d');
+    displayIntensity = document.getElementById('displayIntensity'),
+    displayContextIntensity = display.getContext('2d');
 
 //GelGreen emission spectra and excitation spectra diverge at ~515 nm, or #1fff00 (31, 255, 0)
 
@@ -28,9 +28,11 @@ function renderColorSpace(data) {
 
     //correllation = corr(darkData, data);
 
-     for (var i = 0, l = data.length; i < l; i += 4) {
-         data[i] = imageData[i];
-     }
+    for (var i = 0, l = data.length; i < l; i += 4) {
+        data[i] = Math.abs(data[i] - imageData[i]);
+        data[i+1] = Math.abs(data[i+1] - imageData[i+1]);
+        data[i+2] = Math.abs(data[i+2] - imageData[i+2]);
+    }
 
     return data;
 }
@@ -80,7 +82,7 @@ function renderIntensity(data) {
         }
 
 
-         else{
+        else{
             data[i] = 255;
             data[i+1] = 0;
             data[i+2] = 0;
@@ -142,4 +144,3 @@ function streamFeed() {
 
 
 streamFeed();
-

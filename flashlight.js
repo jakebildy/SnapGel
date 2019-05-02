@@ -31,9 +31,9 @@ if (SUPPORTS_MEDIA_DEVICES) {
                 const btn = document.querySelector('.switch');
                 btn.addEventListener('click', function(){
 
-                        darkData = imageData.data;
 
-                        flipFlashlight(track);
+
+                    flipFlashlight(track);
 
 
 
@@ -51,11 +51,15 @@ if (SUPPORTS_MEDIA_DEVICES) {
                     advanced: [{torch: true}]
                 });
             }, 1000);
+
             setTimeout(function(){
                 track.applyConstraints({
                     advanced: [{torch: false}]
                 });
+                darkData = feedContext.getImageData(0, 0, display.width, display.height).data;
             }, 1000);
+
+
         }
     }
 
