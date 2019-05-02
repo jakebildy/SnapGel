@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61245c7c-c7bb-41fb-bb44-1287a1dd168f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gel_util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flashlight.js" beforeDir="false" afterPath="$PROJECT_DIR$/flashlight.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gel_imaging.js" beforeDir="false" afterPath="$PROJECT_DIR$/gel_imaging.js" afterDir="false" />
-    </list>
+    <list default="true" id="61245c7c-c7bb-41fb-bb44-1287a1dd168f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -96,7 +91,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flashlight.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="433">
               <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
             </state>
           </provider>
@@ -216,12 +211,12 @@
       <workItem from="1555393665891" duration="12913000" />
       <workItem from="1555748363949" duration="236000" />
       <workItem from="1556304330066" duration="1351000" />
-      <workItem from="1556634190918" duration="7122000" />
+      <workItem from="1556634190918" duration="7348000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21622000" />
+    <option name="totallyTimeSpent" value="21848000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -308,7 +303,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flashlight.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="433">
           <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
         </state>
       </provider>
