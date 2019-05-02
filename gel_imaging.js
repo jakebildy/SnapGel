@@ -39,6 +39,7 @@ function renderColorSpace(data) {
         data[i+2] = 0;
         data[i+1] = data[i+1]/2;
 
+        //Eliminates principal flashlight glare
         if (data[i] > 250 && data[i+1] < 30) {
             data[i] = 0;
         }
@@ -47,9 +48,25 @@ function renderColorSpace(data) {
 
         pixel = (data[i] + data[i+1])/2
 
+        // Eliminates secondary flashlight glare
+
+        if (pixel > 250) {
+            data[i] = 100;
+        }
+
+        // Increase contrast
+
+        pixel = pixel * 1.3;
+
+        if (pixel > 255) {
+            pixel = 255;
+        }
+
+        // Sets RGB pixels to the black and white pixel
         data[i] = pixel;
         data[i+1] = pixel;
         data[i+2] = pixel;
+
     }
 
     return data;
