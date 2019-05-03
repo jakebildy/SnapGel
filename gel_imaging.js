@@ -48,17 +48,20 @@ function renderColorSpace(data) {
 
         pixel = (data[i] + data[i+1])/2;
 
-        // Eliminates secondary flashlight glare
-
-        if (pixel > 220) {
-            data[i] = 100;
-        }
 
         // Increase contrast with gel bands
 
         if (pixel  >  130) {
             pixel = pixel * 1.4;
         }
+
+
+        // Eliminates secondary flashlight glare
+
+        if (pixel > 220) {
+            data[i] = 100;
+        }
+
 
         if (pixel > 255) {
             pixel = 255;
