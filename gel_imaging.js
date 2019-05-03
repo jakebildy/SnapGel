@@ -22,8 +22,10 @@ var feed = document.getElementById('feed'),
 
 //GelGreen emission spectra and excitation spectra diverge at ~515 nm, or #1fff00 (31, 255, 0)
 
-
-
+/**
+ *
+ * This function manipulates the image data to show the gel bands.
+ */
 function renderColorSpace(data) {
 
     for (var i = 0, l = data.length; i < l; i += 4) {
@@ -68,60 +70,61 @@ function renderColorSpace(data) {
     return data;
 }
 
-
-function renderIntensity(data) {
-    for (var i = 0, l = data.length; i < l; i += 4) {
-
-
-        //scale color intensity
-
-        var ratio = 255/data[i+1];
-
-        if (data[i] + data[i+1] < 100) {
-            data[i] = 0;
-            data[i+1] = 0;
-        }
-
-        data[i] = data[i] * ratio;
-        data[i+1] = data[i+1]*ratio;
-
-        if (data[i+1] > 255) {
-            data[i+1] = 255;
-        }
-
-        var distance = colorDistance(data[i], data[i+1], data[i+2]);
-
-        if (distance > 223) {
-            data[i] = 0;
-            data[i+1] = 0;
-            data[i+2] = 0;
-        }
-        else if (distance > 220) {
-            data[i] = 0;
-            data[i+1] = 0;
-            data[i+2] = 140;
-        }
-        else if (distance > 217) {
-            data[i] = 0;
-            data[i+1] = 0;
-            data[i+2] = 255;
-        }
-        else if (distance > 210) {
-            data[i] = 0;
-            data[i+1] = 255;
-            data[i+2] = 0;
-        }
-
-
-        else{
-            data[i] = 255;
-            data[i+1] = 0;
-            data[i+2] = 0;
-        }
-    }
-    return data;
-}
-
+/**
+ *   Currently unused - renders an intensity map where red bands are the strongest, blue are the weakest
+ */
+// function renderIntensity(data) {
+//     for (var i = 0, l = data.length; i < l; i += 4) {
+//
+//
+//         //scale color intensity
+//
+//         var ratio = 255/data[i+1];
+//
+//         if (data[i] + data[i+1] < 100) {
+//             data[i] = 0;
+//             data[i+1] = 0;
+//         }
+//
+//         data[i] = data[i] * ratio;
+//         data[i+1] = data[i+1]*ratio;
+//
+//         if (data[i+1] > 255) {
+//             data[i+1] = 255;
+//         }
+//
+//         var distance = colorDistance(data[i], data[i+1], data[i+2]);
+//
+//         if (distance > 223) {
+//             data[i] = 0;
+//             data[i+1] = 0;
+//             data[i+2] = 0;
+//         }
+//         else if (distance > 220) {
+//             data[i] = 0;
+//             data[i+1] = 0;
+//             data[i+2] = 140;
+//         }
+//         else if (distance > 217) {
+//             data[i] = 0;
+//             data[i+1] = 0;
+//             data[i+2] = 255;
+//         }
+//         else if (distance > 210) {
+//             data[i] = 0;
+//             data[i+1] = 255;
+//             data[i+2] = 0;
+//         }
+//
+//
+//         else{
+//             data[i] = 255;
+//             data[i+1] = 0;
+//             data[i+2] = 0;
+//         }
+//     }
+//     return data;
+// }
 
 
 
@@ -132,6 +135,7 @@ function changeRenderFormat() {
 }
 
 
+// The constraints for the video
 const constraints = {
     video: {width: {min: 1280}, height: {min: 720},
         facingMode: "environment"

@@ -1,3 +1,5 @@
+// This script turns on the flashlight by default
+
 const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
 
 if (SUPPORTS_MEDIA_DEVICES) {

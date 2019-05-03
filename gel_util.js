@@ -25,10 +25,10 @@ function invert(data) {
  * @param dataOld
  * @param dataNew
  *
- * This function returns the normalized linear correlation of two sets of RGB data.
+ * This function returns the normalized inner products of two sets of RGB data.
  *
  * By treating the RGB value as a vector, you can ignore the effect of brightness - think of the brightness as scaling
- * a vector along its span.
+ * a vector along its span. Currently unused, but could be used in the future to improve image rendering
  */
 function corr(dataOld, dataNew) {
 
@@ -84,48 +84,51 @@ function brightness(data, i) {
 
 
 /**
- * This function converts the regular camera view to an intensity view
+ * Takes in r,g,b params and returns the HSV value as an array
+ * shout-out to StackOverflow for documentation on implementing this conversion
  */
-function renderIntensity(data) {
-
-}
-
 function RGBtoHSV(r, g, b) {
-
-}
-
-RGBtoHSV= function(r, g, b) {
     var h,s,v;
 
     min = Math.min( r, g, b );
     max = Math.max( r, g, b );
 
-
     v = max;
+
     delta = max - min;
+
     if( max != 0 )
-        s = delta / max;        // s
+        s = delta / max;        // saturation value
+
     else {
-        // r = g = b = 0        // s = 0, v is undefined
         s = 0;
         h = -1;
         return [h, s, undefined];
     }
+
     if( r === max )
-        h = ( g - b ) / delta;      // between yellow & magenta
+        h = ( g - b ) / delta;
+
     else if( g === max )
-        h = 2 + ( b - r ) / delta;  // between cyan & yellow
+        h = 2 + ( b - r ) / delta;
+
     else
-        h = 4 + ( r - g ) / delta;  // between magenta & cyan
-    h *= 60;                // degrees
+        h = 4 + ( r - g ) / delta;
+    h *= 60;
+
     if( h < 0 )
         h += 360;
+
     if ( isNaN(h) )
         h = 0;
-    return [h,s,v];
-};
 
-HSVtoRGB= function(color) {
+    return [h,s,v];
+}
+
+/**
+ * This function takes in an HSV color and returns the RGB values as an array
+ */
+function HSVtoRGB (color) {
     var i;
     var h,s,v,r,g,b;
     h= color[0];
@@ -168,7 +171,7 @@ HSVtoRGB= function(color) {
             g = p;
             b = v;
             break;
-        default:        // case 5:
+        default:
             r = v;
             g = p;
             b = q;
