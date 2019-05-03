@@ -44,20 +44,20 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="985" />
-          <entry key="js" value="5607" />
+          <entry key="js" value="5608" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="985" />
-          <entry key="JavaScript" value="5607" />
+          <entry key="JavaScript" value="5608" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -89,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gel_imaging.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1358">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="216">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -212,12 +212,12 @@
       <workItem from="1555393665891" duration="12913000" />
       <workItem from="1555748363949" duration="236000" />
       <workItem from="1556304330066" duration="1351000" />
-      <workItem from="1556634190918" duration="14207000" />
+      <workItem from="1556634190918" duration="14511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28707000" />
+    <option name="totallyTimeSpent" value="29011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -286,13 +286,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gel_imaging.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1358">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -305,6 +298,13 @@
             <element signature="n#style#0;n#img#2;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gel_imaging.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
