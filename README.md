@@ -37,3 +37,5 @@ The algorithm works something like this:
 
 • Improve image optimization by reducing the contrast at the end result.
 
+• Improve capability to run on iOS
+
