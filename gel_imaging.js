@@ -22,7 +22,6 @@ var feed = document.getElementById('feed'),
 
 //GelGreen emission spectra and excitation spectra diverge at ~515 nm, or #1fff00 (31, 255, 0)
 
-//wavelength 540 nm is the peak of the excitation (129, 255, 0)
 
 
 function renderColorSpace(data) {
@@ -140,7 +139,9 @@ const constraints = {
 };
 
 const video = document.querySelector('video');
-
+video.setAttribute('autoplay', '');
+video.setAttribute('muted', '');
+video.setAttribute('playsinline', '');
 
 navigator.mediaDevices.getUserMedia(constraints).
 then((stream) => {video.srcObject = stream});
